@@ -1,0 +1,8 @@
+The file "data/connected_synonyms_graph.adjlist" stores a graph.
+The graph consists of 2350 words and 46218 edges.
+
+The words are generated in the following procedure:
+Run BFS, for all 70 words in file "data/seed_words.txt", to search for the synonyms on thesaurus.com. For all synonyms, search for synonyms. Repeat for two levels of BFS and stop.
+
+The edges represent the synonym-synonym relationship.
+Note that the graph is not undirected. For example, while "happy" has synonym "peaceful", "peaceful" has no synony "happy".
