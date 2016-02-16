@@ -16,9 +16,10 @@ class Constructor:
         for key in connected_synonyms_dict:
             for synonym in connected_synonyms_dict[key]:
                 g.add_edge(key, synonym)
-        data = json_graph.node_link_data(g)
-        with open('data/connected_synonym_graph.json', 'w') as f:
-            f.write(ujson.dumps(data))
+        # data = json_graph.node_link_data(g)
+        with open('data/connected_synonyms_graph.adjlist', 'wb') as f:
+            # f.write(ujson.dumps(data))
+            nx.write_adjlist(g, f)
 
 c = Constructor()
 c.work()
