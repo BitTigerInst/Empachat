@@ -19,7 +19,7 @@ class Constructor:
         # data = json_graph.node_link_data(g)
         with open('data/connected_synonyms_graph.adjlist', 'wb') as f:
             # f.write(ujson.dumps(data))
-            nx.write_adjlist(g, f)
+            nx.write_adjlist(g, f, delimiter='=-=')
 
 c = Constructor()
 c.work()
