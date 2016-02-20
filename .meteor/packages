@@ -21,3 +21,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 twbs:bootstrap
 materialize:materialize
 iron:router
+accounts-ui
+accounts-password
