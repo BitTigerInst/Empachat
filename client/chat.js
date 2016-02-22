@@ -10,7 +10,7 @@ Template.chat.messages = function () {
     else {
       messages[i].name = "Unknown";
     }
-  };
+  }
 
   var conversations = [];
   var newConversation = messages[0];
@@ -30,19 +30,3 @@ Template.chat.messages = function () {
   $.titleAlert("New chat message!", {requireBlur: true});
   return conversations;
 };
-
-
-Template.chat.events(okCancelEvents(
-    '#messageInput',
-    {
-      ok: function (value, evt) {
-        Messages.insert({
-          author: Meteor.userId(),
-          message: value,
-          timestamp: (new Date()).getTime(),
-          channel: Session.get('channel') 
-        });
-        evt.target.value = "";
-      }
-    }
-));
