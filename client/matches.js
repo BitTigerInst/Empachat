@@ -1,6 +1,5 @@
-Template.matches.matched_users = function(){
-  return Meteor.users.find({ "status.online": true });
-};
+
+Meteor.subscribe('userStatus');
 
 Template.matches.labelClass = function() {
   if (this.status.idle)
@@ -10,6 +9,12 @@ Template.matches.labelClass = function() {
   else
     return "label-default";
 };
+
+Template.matches.helpers({
+  matched_users: function(){
+    return Meteor.users.find({'status.online': false}).fetch()
+  }
+});
 
 Template.matches.events({
   "submit .new-chat": function(event){

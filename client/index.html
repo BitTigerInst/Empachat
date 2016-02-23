@@ -119,7 +119,9 @@
 <template name='matches'>
   <h3>Matched Users</h3>
   {{#each matched_users}}
-    {{status.online}}
+    <h2>{{username}}</h2>
+    <p>{{status.online}}</p>
+    <!--
     <div class='matched-user'>
       <form class='new-chat'>
         <span class="label {{labelClass}}">{{username}}</span>
@@ -129,6 +131,7 @@
         <button type='submit'>Chat</button>
       </form>
     </div>
+    -->
   {{/each}}
 </template>
 
