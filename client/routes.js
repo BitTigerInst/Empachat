@@ -1,19 +1,20 @@
 Router.configure({
-    layoutTemplate: 'layout'
+    layoutTemplate: 'application-layout'
 });
 
 Router.map(function () {
   this.route('home', {
     path: '/',
-    template: 'index',
-    layoutTemplate: 'layout',
+    template: 'home',
+    layoutTemplate: 'application-layout',
   });
 });
 
 Router.map(function () {
-  this.route('musicchat', {
-    path: '/mc',
-    template: 'musicchat',
-    layoutTemplate: 'layout',
+  this.route('chat', {
+    path: '/chat',
+    template: 'chat',
+    layoutTemplate: 'application-layout',
   });
 });
+

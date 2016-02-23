@@ -1,0 +1,35 @@
+
+<template name='chatwindow'>
+  <div class="chat">
+    <div class="conversation commentArea" id="scroll">
+      {{#each messages }}
+        {{#if message}}
+          <div class="{{authorCss author}}">
+            {{message }}<br/>
+            <i class="author">{{ name }}</i>
+          </div>
+        {{else}}
+          <div class="bubbledLeft">
+            Hi ! Share the url with your friend<br/>
+            <i class="author">SimpleChat</i>
+          </div>
+        {{/if}}
+        <script> if (typeof(scrolldown) == "function") { scrolldown(); }</script>
+      {{/each}}
+    </div>
+    <div class="conversationInput"> 
+      <input type="text" id="messageInput" class="form-control text" placeholder="Message..." maxlength="300">
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    /* Call it everytime ? ....
+    around 10 times at the first call...
+     */
+    var scrolldown = function() {
+      console.log("one scrolldown call..."); // reminder to debug...
+      var elem = document.getElementById('scroll');
+      elem.scrollTop = elem.scrollHeight;
+    }
+  </script>
+</template>
