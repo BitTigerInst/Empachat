@@ -12,7 +12,8 @@ Template.matches.labelClass = function() {
 
 Template.matches.helpers({
   matched_users: function(){
-    return Meteor.users.find({'status.online': false}).fetch()
+    return Meteor.users.find({'status.online': true});
+    console.log(username);
   }
 });
 
