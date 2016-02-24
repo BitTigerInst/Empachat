@@ -22,6 +22,7 @@ Template.matches.events({
     var username = event.target.username.value;
     var emotion = event.target.emotion.value;
     console.log(username + ', ' + emotion);
-
+    event.target.username.value = '';
+    event.target.emotion.value = '';
   }
 });
