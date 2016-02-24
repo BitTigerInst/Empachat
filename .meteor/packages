@@ -23,3 +23,6 @@ iron:router
 accounts-ui
 accounts-password
 mizzao:user-status
+mrt:soundcloud
+accounts-base
+ian:bootstrap-3

@@ -1,5 +1,9 @@
 
-Meteor.subscribe('userStatus');
+Tracker.autorun(function(){
+    Meteor.subscribe('userStatus');
+});
+
+
 
 Template.matches.labelClass = function() {
   if (this.status.idle)
@@ -12,17 +16,31 @@ Template.matches.labelClass = function() {
 
 Template.matches.helpers({
   matched_users: function(){
-    return Meteor.users.find({'status.online': false}).fetch()
+    return Meteor.users.find({'status.online': true, _id: {$ne: Meteor.userId()}})
   }
 });
 
 Template.matches.events({
-  "submit .new-chat": function(event){
+  /*
+  'submit .new-chat': function(event){
     event.preventDefault();
     var username = event.target.username.value;
-    var emotion = event.target.emotion.value;
-    console.log(username + ', ' + emotion);
     event.target.username.value = '';
-    event.target.emotion.value = '';
+  },
+  */
+
+  'click .user':function(){
+    Session.set('currentId',this._id);
+    var res=ChatRooms.findOne({chatIds:{$all:[this._id,Meteor.userId()]}});
+    if(res){
+    //already room exists
+      Session.set("roomid",res._id);
+    }
+    else{
+    //no room exists
+      var newRoom= ChatRooms.insert({chatIds:[this._id , Meteor.userId()],messages:[]});
+      Session.set('roomid',newRoom);
+    }
   }
 });
+
