@@ -1,7 +1,27 @@
-
 <template name='chat'>
-  {{> loginButtons}}
-  {{> musicplayer}}
-  {{> chatwindow}}
-  {{> matches}}
+    {{> loginButtons}}
+
+    <div style="height:20px">
+
+    </div>
+    
+        <div class="row z-depth-2" style="background-color:white;">
+            <div class="col s7" style="padding-left:20px;">
+                <div style="padding:20px 20px 20px 20px;">
+                    {{> musicplayer}}
+                </div>
+                <div style="height:20px"></div>
+                <div>
+                    {{> chatwindow}}
+ 
+               
+                </div>
+            </div>
+            <div class=" col s5" style="padding-right:50px;text-align:center;">
+                {{> matches}}
+            </div>
+        </div>
+     <div style="height:200px">
+
+    </div>
 </template>

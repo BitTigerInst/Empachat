@@ -1,12 +1,15 @@
 <template name="application-layout">
-  <head>
-    <meta charset="UTF-8">
-    <title>Playgorund</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <body style="background-color:#e3f2fd">
-    {{> navigation}}
-    {{> yield}}
-    {{> footer}}
-  </body>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>MainPage</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+
+    <body style="background-color:#B3E5FC">
+        <div class="container flow-text" style="width:80%;">
+           
+            {{> navigation}} {{> yield}} {{> footer}}
+        </div>
+    </body> 
 </template>
