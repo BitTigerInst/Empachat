@@ -1,0 +1,38 @@
+{"artist":"Beach House","title":"10 Mile Stereo"}
+{"artist":"Sleigh Bells","title":"Rill Rill"}
+{"artist":"R\u00f6kkurr\u00f3","title":"\u00cd bl\u00ed\u00f0u str\u00ed\u00f0i"}
+{"artist":"Radio Nowhere","title":"London Calling  "}
+{"artist":"Barefoot Truth","title":"Roll If Ya Fall"}
+{"artist":"Natasha Kozaily","title":"Tango to Bern"}
+{"artist":"Laura Jansen","title":"The End"}
+{"artist":"Lelia Broussard","title":"Alone On A Train"}
+{"artist":"Peter Bradley Adams","title":"For You"}
+{"artist":"M83","title":"We Own The Sky"}
+{"artist":"Joshua James","title":"Coal War"}
+{"artist":"Andy Zipf","title":"Nothings Wrong"}
+{"artist":"Chris Greenwood","title":"Together alone reprise like bombs"}
+{"artist":"Jackie Stem","title":"Everything"}
+{"artist":"The Rescues","title":"Cant Stand The Rain"}
+{"artist":"Hannah Miller","title":"At My Best"}
+{"artist":"band of horses","title":"The Funeral"}
+{"artist":"Found Sound Orchestra","title":"Little La La"}
+{"artist":"Michal Towber","title":"Haunt Me"}
+{"artist":"Jake Coco","title":"Dont Go Feat. Caitlin Hart"}
+{"artist":"Chris Greenwood","title":"Together alone reprise like bombs"}
+{"artist":"Teresa A. Thomas","title":"Hatikva"}
+{"artist":"Mumford & Sons","title":"Little Lion Man"}
+{"artist":"Sleigh Bells","title":"Rill Rill"}
+{"artist":"Alexa Wilkinson","title":"Grey Skies"}
+{"artist":"Fabrizio Paterlini","title":"Passaggi"}
+{"artist":"Will Knox","title":"Immigrant Hands"}
+{"artist":"Sleep Mode","title":"Ortegas All"}
+{"artist":"The Candle Thieves","title":"The Sunshine Song"}
+{"artist":"Joshua James","title":"Coal War"}
+{"artist":"Frida Sundemo","title":"I Was Surrounded"}
+{"artist":"Diana Pops","title":"Light My Cigarette"}
+{"artist":"Bella Ruse","title":"Dark Horse"}
+{"artist":"Gaby Moreno","title":"Daydream by Design"}
+{"artist":"Daniela Andrade","title":"Things Weve Said"}
+{"artist":"Sarah Jarosz","title":"Little Song"}
+{"artist":"Choir of Young Believers","title":"Next Summer"}
+{"artist":"Teresa A. Thomas","title":"Hatikva"}

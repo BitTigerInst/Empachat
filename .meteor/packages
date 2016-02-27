@@ -22,7 +22,6 @@ materialize:materialize
 iron:router
 accounts-password
 mizzao:user-status
-mrt:soundcloud
 accounts-base
 ian:bootstrap-3
 accounts-ui-unstyled

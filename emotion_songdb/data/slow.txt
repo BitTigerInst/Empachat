@@ -1,0 +1,20 @@
+{"artist":"Paperplanes And Dragonboats","title":"Wait, I Love You"}
+{"artist":"Psychic Stunts","title":"Speakers Block"}
+{"artist":"Brave Little Note","title":"Tell Tale Eyes"}
+{"artist":"The Woo!Worths","title":"Konichiwa"}
+{"artist":"Kit Flensted","title":"Deep Dark Water"}
+{"artist":"Sacha Sacket","title":"You Could"}
+{"artist":"Teresa A. Thomas","title":"Broken Bridge"}
+{"artist":"Sacha Sacket","title":"You Could"}
+{"artist":"Adrina Thorpe","title":"Kiss the Day"}
+{"artist":"Echo Slightly","title":"You Set Me Up"}
+{"artist":"Landon Pigg","title":"Falling In Love At a Coffee Shop"}
+{"artist":"The Low Anthem","title":"To the Ghosts Who Write History Books"}
+{"artist":"Priscilla Ahn","title":"Rain"}
+{"artist":"Trey Lockerbie","title":"Look at Miss Ohio "}
+{"artist":"Caroline Kelley","title":"Make You Feel My Love"}
+{"artist":"Josh Ritter","title":"Girl in the War"}
+{"artist":"Brave Little Note","title":"Our Romantic Horticulture"}
+{"artist":"Echo Slightly","title":"You Set Me Up"}
+{"artist":"Horse Feathers","title":"curs in the weeds"}
+{"artist":"Ve","title":"The Sleep"}
