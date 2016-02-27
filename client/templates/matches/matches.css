@@ -8,10 +8,21 @@
     font-weight: 500;
     
 }
-li.user a{
-    font-weight: 200;
+li.user {
+    font-weight: 400;
     font-family: 'Roboto';
-    color:#212121;
-    text-decoration-color: crimson;
+    font-size: 25px;
+    color:#03A9F4;
+    list-style: none;
+    vertical-align: middle;
+}
+
+li.user a{
+    text-decoration: none;
+    
     text-decoration-line: none;
+    
+}
+li.user a:hover{
+    color: orangered;
 }

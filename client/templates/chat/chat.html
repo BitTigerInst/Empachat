@@ -1,6 +1,6 @@
 <template name='chat'>
 
-    {{> loginButtons}}
+
 
     <div class="" style="background-color:;height:530px">
         <div class="row" style="margin:0 0 0 0;">
@@ -8,26 +8,27 @@
                 <div class="card" style="padding:0 0 0 0; width:95%">
                     {{> musicplayer}}
                 </div>
-
-                <div class="card" id="scroll" style="word-wrap: break-word;overflow:scroll;height: 230px;margin:30px 0 30px 0;width:95%">
-                    <div  style="margin:20px 20px 20px 20px;">
-                        {{> messages}}
-                        <br>
+                <div id="chatbox">
+                    <div  id="scroll" >
+                        <div style="margin:20px 20px 20px 20px;">
+                            {{> messages}}
+                            <br>
+                        </div>
                     </div>
-                </div>
-                <div class="card" style="width:95%">
-                    <div style="margin:20px 20px 20px 20px;">
-                        {{> chatwindow}}
+                    <div class="" style="width:95%">
+                        <div style="margin:20px 20px 20px 20px;">
+                            {{> chatwindow}}
+                        </div>
                     </div>
                 </div>
             </div>
-    
+
             <div class=" col s12 m6 l5 " style="text-align:center;">
                 <div style="margin:0 0 20px 0;width:95%">
-                    <div class="card">
+                    <div class="match-title">
                         <span>Matched Users</span>
                     </div>
-                    <div class="card" id="" style="overflow: auto;height: 421px;margin:30px 0 30px 0;">
+                    <div class="" id="" style="overflow: auto;height: 421px;margin:0 0 30px 0;">
                         <div style="margin:20px 0 20px 0;">
                             {{> matches}}
                             <br>
@@ -43,7 +44,8 @@
 
 <template name="messages">
 
-  {{#each msgs}}
-    <!--{{createdAt}}--> <p id="chat-content" ><span class="name">{{name}}:</span> <span class="text">{{text}}</span></p>
-  {{/each}}
+    {{#each msgs}}
+    <!--{{createdAt}}-->
+    <p id="chat-content"><span class="name">{{name}}:</span> <span class="text">{{text}}</span></p>
+    {{/each}}
 </template>

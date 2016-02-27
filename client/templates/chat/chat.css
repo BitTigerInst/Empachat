@@ -1,16 +1,32 @@
-span.name{
+span.name {
     font-weight: 700;
     font-family: 'Roboto';
-    color:#727272;
+    color: #0288D1;
 }
 
-span.text{
+span.text {
     font-weight: 200;
     font-family: 'Roboto';
-    color:#212121;
+    color: #212121;
 }
 
-#chat-content{
-/*    background-color: skyblue*/
+#chat-content {
+    /*    background-color: skyblue*/
+}
+
+.match-title {
     
+}
+
+#scroll {
+    word-wrap: break-word;
+    overflow: scroll;
+    height: 230px;
+    margin: 30px 0 30px 0;
+    width: 95%
+}
+#chatbox{
+    background-color: white;
+    margin-right: 0;
+    width: 95%;
 }
