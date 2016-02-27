@@ -4,12 +4,15 @@
         <meta charset="UTF-8">
         <title>MainPage</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
     </head>
-
-    <body style="background-color:#B3E5FC">
+   
+    <body style="background-color:#EEEEEE;">
+        {{> navigation}}
         <div class="container flow-text" style="width:80%;">
-           
-            {{> navigation}} {{> yield}} {{> footer}}
+
+            {{> yield}} 
         </div>
-    </body> 
+        {{> footer}}
+    </body>
 </template>
