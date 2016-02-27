@@ -11,7 +11,7 @@
 
                 <div class="card " id="" style="overflow: scroll;height: 230px;margin:30px 0 30px 0;width:95%">
                     <div style="margin:20px 20px 20px 20px;">
-                        asdsad
+                        {{> messages}}
                         <br>
                     </div>
                 </div>
@@ -24,10 +24,12 @@
 
             <div class=" col s12 m6 l5 " style="text-align:center;">
                 <div style="margin:0 0 20px 0;width:95%">
-                    {{> matches}}
-                    <div class="card " id="" style="overflow: scroll;height: 421px;margin:30px 0 30px 0;">
+                    <div class="card">
+                        <span>Matched Users</span>
+                    </div>
+                    <div class="card" id="" style="overflow: scroll;height: 421px;margin:30px 0 30px 0;">
                         <div style="margin:20px 0 20px 0;">
-                            somebody
+                            {{> matches}}
                             <br>
                         </div>
                     </div>
@@ -37,4 +39,10 @@
         </div>
     </div>
 
+</template>
+
+<template name="messages">
+  {{#each msgs}}
+    {{createdAt}} <strong>{{name}}:</strong> {{text}}<br>
+  {{/each}}
 </template>

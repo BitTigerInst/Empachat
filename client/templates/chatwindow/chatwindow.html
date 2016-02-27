@@ -1,7 +1,6 @@
 
 <template name='chatwindow'>
   <div class="chat">
-    {{> messages}}
     {{> input}}
   </div>
 
@@ -15,13 +14,6 @@
       elem.scrollTop = elem.scrollHeight;
     }
   </script>
-</template>
- 
-
-<template name="messages">
-  {{#each msgs}}
-    {{createdAt}} <strong>{{name}}:</strong> {{text}}<br>
-  {{/each}}
 </template>
 
 <template name="input">
