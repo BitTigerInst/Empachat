@@ -12,6 +12,7 @@ Template.input.events ({
           var name = Meteor.user().username;
           var message = document.getElementById('message');
           if (message.value !== '') {
+              scrolldown();
             var de = ChatRooms.update({"_id":Session.get("roomid")},{$push:{messages:{
               name: name,
               text: message.value,
@@ -20,6 +21,7 @@ Template.input.events ({
             console.log(de);
             document.getElementById('message').value = '';
             message.value = '';
+            
           }
         }
         else

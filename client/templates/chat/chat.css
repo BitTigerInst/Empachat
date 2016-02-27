@@ -1,0 +1,16 @@
+span.name{
+    font-weight: 700;
+    font-family: 'Roboto';
+    color:#727272;
+}
+
+span.text{
+    font-weight: 200;
+    font-family: 'Roboto';
+    color:#212121;
+}
+
+#chat-content{
+/*    background-color: skyblue*/
+    
+}
