@@ -1,37 +1,39 @@
 <template name='chat'>
-  
- {{> loginButtons}} 
+
+    {{> loginButtons}}
 
     <div class="" style="background-color:;height:530px">
         <div class="row" style="margin:0 0 0 0;">
-            <div class="col s12 m6 l7" style="">
-                <div class="card" style="padding:0 0 0 0">
+            <div class="col s12 m6 l7">
+                <div class="card" style="padding:0 0 0 0; width:95%">
                     {{> musicplayer}}
                 </div>
-                
-                <div class="card " id="" style="overflow: scroll;height: 230px;margin:30px 0 30px 0;">
-                   <div style="margin:20px 20px 20px 20px;">
-                    asdsad<br>
+
+                <div class="card " id="" style="overflow: scroll;height: 230px;margin:30px 0 30px 0;width:95%">
+                    <div style="margin:20px 20px 20px 20px;">
+                        asdsad
+                        <br>
                     </div>
-               </div>
-                <div class="card" >
-                   <div style="margin:20px 20px 20px 20px;">
-                    {{> chatwindow}}
                 </div>
-                 </div>
-            </div>
-            
-            <div class=" col s12 m6 l5 " style="text-align:center;padding-top:0">
-               <div style="margin:0 20px 20px 20px;">
-                {{> matches}}
-                <div class="card " id="" style="overflow: scroll;height: 405px;margin:30px 0 30px 0;">
-                   <div style="margin:20px 20px 20px 20px;">
-                    somebody<br>
+                <div class="card" style="width:95%">
+                    <div style="margin:20px 20px 20px 20px;">
+                        {{> chatwindow}}
                     </div>
-               </div>
-                 </div>
+                </div>
             </div>
-            
+
+            <div class=" col s12 m6 l5 " style="text-align:center;">
+                <div style="margin:0 0 20px 0;width:95%">
+                    {{> matches}}
+                    <div class="card " id="" style="overflow: scroll;height: 421px;margin:30px 0 30px 0;">
+                        <div style="margin:20px 0 20px 0;">
+                            somebody
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
