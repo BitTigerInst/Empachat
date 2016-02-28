@@ -12,9 +12,11 @@ Meteor.startup(function(){
   });
 });
 
+
 Template.home.events({
-  "submit .search-emotion": function(event){
+  'submit .search-emotion': function(event){
     event.preventDefault();
+    Router.go('/chat');
     var emotion = event.target.emotion.value;
     SC.get('/tracks', {
       tag_list: emotion,

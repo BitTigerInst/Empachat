@@ -3,6 +3,8 @@ Tracker.autorun(function(){
 });
 
 
+
+
 Template.input.events ({
   'keydown input#message' : function (event) {
     
@@ -17,6 +19,7 @@ Template.input.events ({
               name: name,
               text: message.value,
               createdAt: Date.now()
+              
             }}});
             console.log(de);
             document.getElementById('message').value = '';

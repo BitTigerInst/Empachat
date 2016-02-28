@@ -46,6 +46,15 @@
 
     {{#each msgs}}
     <!--{{createdAt}}-->
-    <p id="chat-content"><span class="name">{{name}}:</span> <span class="text">{{text}}</span></p>
+    <p id="chat-content"><span class="name">{{name}}</span> <span class="text">{{text}}</span></p>
     {{/each}}
+</template>
+
+
+<template name="notifications">
+    <ul class="notifications">
+       {{#each notifications}}
+           {{> notification}}
+       {{/each}}
+    </ul>
 </template>
