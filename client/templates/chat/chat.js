@@ -1,13 +1,3 @@
-Template.messages.rendered = function() {
-    var query = ChatRooms.findOne({
-        _id: Session.get('roomid')
-    });
-    query.observeChanges({
-        added: function(){
-            console.log("New messages from: ");
-        }
-    })
-};
 Template.messages.helpers({
     'msgs': function () {
         var result = ChatRooms.findOne({
@@ -20,7 +10,7 @@ Template.messages.helpers({
     },
 });
 
-
+/*
 Template.card.messages = function () {
     
     var messagesCursor = Messages.find({}, {
@@ -59,5 +49,5 @@ Template.card.messages = function () {
     });
     return conversations;
 };
-
+*/
 
