@@ -31,6 +31,7 @@ Template.matches.events({
 
   'click .user':function(){
     Session.set('currentId',this._id);
+    //Session.set('isChatting',1);
     var res=ChatRooms.findOne({chatIds:{$all:[this._id,Meteor.userId()]}});
     if(res){
     //already room exists
@@ -43,4 +44,17 @@ Template.matches.events({
     }
   }
 });
+
+// Handlebars.registerHelper('getStatusColor', function(isChatting) {
+//   switch (isChatting) {
+//     case 0 : {
+//       return 'green';
+//     }
+//     break;
+//     case 1 : {
+//       return 'red';
+//     }
+//     break;
+//   }
+// });
 

@@ -7,6 +7,12 @@ Template.messages.helpers({
   }
 });
 
+Template.chat.events({
+  'click .back-previous' : function(event){
+    history.back();
+  }
+})
+
 Template.card.messages = function () {
   var messagesCursor = Messages.find({}, {sort:{timestamp:-1}, limit:42});
   var messages = messagesCursor.fetch().reverse(); // Should use observechnage to avoid over computation ?
