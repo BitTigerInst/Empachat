@@ -22,6 +22,13 @@ Template.input.events ({
               
             }}});
             console.log(de);
+            Notifications.insert({
+              postId: Meteor.userId(),
+              userId: Session.get("currentId"),
+              username: Meteor.user().username,
+              read: false
+            });
+            //console.log(Notifications.findOne(Meteor.userId());
             document.getElementById('message').value = '';
             message.value = '';
             
