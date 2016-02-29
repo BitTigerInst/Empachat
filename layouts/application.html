@@ -1,0 +1,29 @@
+<template name="application-layout">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>MainPage</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+    </head>
+
+
+    <body style="background-color:#EEEEEE;font-family: 'Roboto', sans-serif;">
+
+   
+<!--    <body class='application-container'>-->
+
+        {{> navigation}}
+        <div class="container flow-text" style="width:80%;">
+
+            {{> yield}}
+        </div>
+        {{> footer}}
+    </body>
+</template>

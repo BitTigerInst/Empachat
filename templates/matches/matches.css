@@ -1,0 +1,28 @@
+.matched-user{
+  min-height: 100px;
+  border-color: #111111;
+}
+
+#header {
+    font-size: 30;
+    font-weight: 500;
+    
+}
+li.user {
+    font-weight: 400;
+    font-family: 'Roboto';
+    font-size: 25px;
+    color:#03A9F4;
+    list-style: none;
+    vertical-align: middle;
+}
+
+li.user a{
+    text-decoration: none;
+    
+    text-decoration-line: none;
+    
+}
+li.user a:hover{
+    color: orangered;
+}
