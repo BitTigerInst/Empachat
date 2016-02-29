@@ -3,6 +3,11 @@ Channels = new Meteor.Collection('channels');
 ChatRooms = new Meteor.Collection("chatrooms");
 Notifications = new Meteor.Collection('notifications');
 
+Pairs = new Mongo.Collection("pairs");
+Words = new Mongo.Collection("words");
+Requests = new Mongo.Collection("requests");
+Candidates = new Mongo.Collection("candidates");
+
 Accounts.ui.config({
   passwordSignupFields: "USERNAME_ONLY"
 });
@@ -30,6 +35,7 @@ Template.home.events({
   }
 });
 
+/*
 Template.input_emotion.events ({
   'submit .next' : function (event, template) {
       //var emo = template.find("#emotion").value;
@@ -37,6 +43,7 @@ Template.input_emotion.events ({
       Router.go('/chat');
   }
 });
+*/
 
 Meteor.startup(function(){
   SC.initialize({
@@ -49,3 +56,4 @@ Meteor.startup(function(){
     console.log(tracks);
   });
 });
+

@@ -1,7 +1,10 @@
 
 Tracker.autorun(function(){
     Meteor.subscribe('userStatus');
+    Meteor.subscribe("candidates");
 });
+
+
 
 
 
@@ -15,8 +18,15 @@ Template.matches.labelClass = function() {
 };
 
 Template.matches.helpers({
-  matched_users: function(){
-    return Meteor.users.find({'status.online': true, _id: {$ne: Meteor.userId()}})
+  matched_users: function(){  
+    //Candidates.find({"host": myGuests[i]}).fetch()[0].guests
+    //console.log(Candidates.find());
+    var candidates = Candidates.find({"host": Meteor.user().username}).fetch()[0].guests;
+    console.log(candidates);
+    //console.log(guests);
+    
+    return Meteor.users.find({$and: [{username: {$in: candidates}}, {'status.online': true}]});
+    //return Meteor.users.find({'status.online': true, _id: {$ne: Meteor.userId()}})
   }
 });
 
@@ -36,4 +46,6 @@ Template.matches.events({
     }
   }
 });
+
+
 

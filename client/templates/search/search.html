@@ -1,0 +1,23 @@
+<template name="search">
+	<div id="emotionform">
+	<p>Type to search:  </p>
+	 <div class="well">
+		 <form class="request">
+    {{> inputAutocomplete settings=settings id="emotion" class="input-xlarge" placeholder="Type your emotion..."}}
+			 <input type="submit" value="Request">
+		 </form>
+		 
+	</div>
+	</div>
+	
+</template>
+
+<template name="cancel">
+	<form class="cancel">
+        <input type="submit" value="Cancel">
+    </form>
+</template>
+
+<template name="words">
+	<span class="label">{{word}}</span>
+</template>

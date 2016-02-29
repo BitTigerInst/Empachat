@@ -1,4 +1,8 @@
 <template name='chat'>
+<div id='chatbox' style="display:none">
+    <div style="height:20px">
+        
+    </div>
 
 
     <div class="" style="background-color:;height:530px">
@@ -11,6 +15,7 @@
                     <div  id="scroll" >
                         <div style="margin:20px 20px 20px 20px;">
                             {{> messages}}
+                            <!-- {{test_template}} -->
                             <br>
                         </div>
                     </div>
@@ -38,16 +43,18 @@
 
         </div>
     </div>
-   
+    {{> cancel}}
+</div>
 
 </template>
+
 
 <template name="messages">
 
     {{#each msgs}}
     <!--{{createdAt}}-->
+
     <div class="{{name}}"><span class="name">{{name}}:</span> <span class="text">{{text}}</span></div><br>
     {{/each}}
 </template>
-
 
