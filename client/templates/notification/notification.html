@@ -5,16 +5,7 @@
       <span class="badge badge-inverse">{{notificationCount}}</span>
     {{/if}}
     <b class="caret"></b>
-  </a>
-  <ul id = "dropdown" class="notification dropdown-content">
-    {{#if notificationCount}}
-      {{#each notifications}}
-      <li>
-         <a href="# "><strong>{{username}}</strong> send a message </a>
-      </li>
-      {{/each}}
-    {{else}}
-      <li><span>No Notifications</span></li>
+  </a>No Notifications</span></li>
     {{/if}}
   </ul>
 </template>

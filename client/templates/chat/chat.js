@@ -3,9 +3,3 @@ Template.messages.helpers({
         var result = ChatRooms.findOne({
             _id: Session.get('roomid')
         });
-        if (result) {
-            return result.messages;
-        }
-    
-    },
-});
