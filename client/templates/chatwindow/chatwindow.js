@@ -45,7 +45,7 @@ Template.input.events ({
               username: Meteor.user().username,
               read: false
             });
-            //console.log(Notifications.findOne(Meteor.userId());
+           
             document.getElementById('message').value = '';
             message.value = '';
             
