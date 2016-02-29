@@ -21,13 +21,6 @@ Template.matches.helpers({
 });
 
 Template.matches.events({
-  /*
-  'submit .new-chat': function(event){
-    event.preventDefault();
-    var username = event.target.username.value;
-    event.target.username.value = '';
-  },
-  */
 
   'click .user':function(){
     Session.set('currentId',this._id);
