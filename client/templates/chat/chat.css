@@ -2,12 +2,14 @@ span.name {
     font-weight: 700;
     font-family: 'Roboto';
     color: #0288D1;
+    font-size: 20px;
 }
 
 span.text {
     font-weight: 200;
     font-family: 'Roboto';
     color: #212121;
+    font-size: 20px;
 }
 
 #chat-content {
