@@ -20,27 +20,20 @@
 
                 <li><a href="#" title="refresh"><i class="material-icons">refresh</i></a></li>
                              
-                <li>
-
-                    <form action="http://www.google.com/search" >
-                        <div class="input-field">
-                            <input name="q" id="search" type="search" required>
-                            <label for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons">close</i>
-                        </div>
-                    </form>
-                </li>
+                <li><a href="http://www.google.com/search" target="_blank" title="search"><i class="material-icons">search</i></a></li>
                   
             </ul>
 
             <ul class="side-nav" id="mobile-demo">
-                <li><a href="sass.html" title="search"><i class="material-icons">search</i></a></li>
-                <li><a href="collapsible.html" title="refresh"><i class="material-icons">refresh</i></a></li>
-                <li><a href="mobile.html" title="login"><i class="material-icons">account_circle</i></a></li>
-
+               <li >{{> loginButtons}}</li>
+                 <li ><a href="#" title="refresh"><i class="material-icons">refresh</i></a></li>
+                 <li><a href="http://www.google.com/search" target="_blank" title="search"><i class="material-icons">search</i></a></li>
             </ul>
         </div>
     </nav>
+    <script>
+        $(".button-collapse").sideNav();
+    </script>
 </template>
 
 

@@ -3,7 +3,24 @@ Tracker.autorun(function(){
 });
 
 
+Template.input.events({
 
+    'keyup input#message': function (event, template) {
+        if (Meteor.user()) {
+            var name = Meteor.user().username;
+            var messages = document.getElementsByClassName(name);
+            for (i = 0; i < messages.length; i++) {
+                messages[i].style.backgroundColor = 'azure';
+                messages[i].style.borderRadius = "20px";
+                messages[i].style.textAlign="right";
+                
+            }
+            console.log("change color");
+        }
+    }
+
+
+});
 
 Template.input.events ({
   'keydown input#message' : function (event) {
