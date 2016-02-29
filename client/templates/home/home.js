@@ -1,10 +1,13 @@
 Messages = new Meteor.Collection('messages');
 Channels = new Meteor.Collection('channels');
 ChatRooms = new Meteor.Collection("chatrooms");
+Notifications = new Meteor.Collection('notifications');
 
 Accounts.ui.config({
   passwordSignupFields: "USERNAME_ONLY"
 });
+
+
 
 Meteor.startup(function(){
   SC.initialize({
@@ -15,8 +18,8 @@ Meteor.startup(function(){
 
 Template.home.events({
   'submit .search-emotion': function(event){
-    event.preventDefault();
     Router.go('/chat');
+    event.preventDefault();
     var emotion = event.target.emotion.value;
     SC.get('/tracks', {
       tag_list: emotion,
