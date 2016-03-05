@@ -1,4 +1,3 @@
-[{"artist":"Obadiah Parker","title":"Hey Ya"},{"artist":"The Parson Red Heads","title":"Forever"},{"artist":"Alexi Murdoch","title":"Orange Sky"},{"artist":"Susan Raven","title":"Glittering Cities"}]{"artist":"Sunday Radio","title":"The Cruel Fate of Satellites"}
 {"artist":"busbee","title":"Sleep"}
 {"artist":"Jeremy Fisher","title":"Cigarette"}
 {"artist":"two seconds away","title":"Photographs"}
