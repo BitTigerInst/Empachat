@@ -24,6 +24,9 @@
 
             {{> yield}}
         </div>
+        {{#if currentUser}} 
+        {{> chat}}
+        {{/if}}   
         {{> footer}}
     </body>
 </template>
