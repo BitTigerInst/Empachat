@@ -1,10 +1,10 @@
 <template name="search">
 	<div id="emotionform">
-	<p>Type to search:  </p>
-	 <div class="well">
+	<p>How do you feel at this moment?  </p>
+	 <div class="">
 		 <form class="request">
     {{> inputAutocomplete settings=settings id="emotion" class="input-xlarge" placeholder="Type your emotion..."}}
-			 <input type="submit" value="Request">
+			 <input type="submit" value="Request" class=" btn-large waves-effect waves-light btn red">
 		 </form>
 	</div>
 	</div>
@@ -12,7 +12,7 @@
 
 <template name="cancel">
 	<form class="cancel">
-        <input type="submit" value="Cancel">
+        <input type="submit" value="Cancel" class=" btn-large waves-effect waves-light btn red">
     </form>
 </template>
 

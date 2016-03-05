@@ -30,15 +30,19 @@ function goBack() {
     window.history.back();
 }
 
+
 function hidden() {
-    //window.document.getElementById("emotionform").setAttribute("hidden");
-    window.document.getElementById("emotionform").style.display = 'none';
+    window.document.getElementById("home").setAttribute("class","hidden");
+
+    //window.document.getElementById("home").style.display = 'none';
     window.document.getElementById("chatbox").style.display = 'initial';
 }
 
+
 function unhidden() {
-    //window.document.getElementById("emotionform").removeAttribute("hidden");
-    window.document.getElementById("emotionform").style.display = 'initial';
+    window.document.getElementById("home").removeAttribute("class","hidden");
+    //window.document.getElementById("home").style.display = 'initial';
+    
     window.document.getElementById("chatbox").style.display = 'none';
 }
 
@@ -48,8 +52,11 @@ Template.search.events({
 			event.preventDefault();
 			var word = event.target.emotion.value;
 			//event.target.emotion.value = "";	
-			jumpto("#chatbox");
+            
+			//jumpto("#chatbox");
+            hidden();
 			Meteor.call("addRequest", word);
+            
 			event.target.emotion.value = "";	
 		},
 		
@@ -62,7 +69,8 @@ Template.cancel.events({
 		event.preventDefault();
 		Meteor.call("deleteRequest");
 		//goBack();
-		jumpto("#home");
+		//jumpto("#home");
+        unhidden();
 	}
 });
 
@@ -71,9 +79,11 @@ Meteor.methods({
 	{
 		
 		if (!Words.findOne({"word": word}))
-		{
+		{ 
+            unhidden();
 			window.alert("Cannot find " + word + "!!!");
-			return;
+            
+			 return;
 		}
 		var requests = Requests.find().fetch();
 		

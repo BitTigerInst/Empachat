@@ -35,16 +35,6 @@ Template.home.events({
   }
 });
 
-/*
-Template.input_emotion.events ({
-  'submit .next' : function (event, template) {
-      //var emo = template.find("#emotion").value;
-      event.preventDefault();
-      Router.go('/chat');
-  }
-});
-*/
-
 Meteor.startup(function(){
   SC.initialize({
     client_id: 'd3f2b79d4e0732d66a4cc3accf02dd92'
@@ -55,4 +45,5 @@ Meteor.startup(function(){
   }).then(function(tracks) {
     console.log(tracks);
   });
+
 });

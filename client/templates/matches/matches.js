@@ -6,7 +6,24 @@ Tracker.autorun(function(){
 
 
 
+Template.input.events({
 
+    'click div.card-panel': function (event, template) {
+        if (Meteor.user()) {
+            var name = Meteor.user().username;
+            var messages = document.getElementsByClassName(name);
+            for (i = 0; i < messages.length; i++) {
+                messages[i].style.backgroundColor = 'azure';
+                messages[i].style.borderRadius = "20px";
+                messages[i].style.textAlign="right";
+                
+            }
+            console.log("change color");
+        }
+    }
+
+
+});
 
 Template.matches.labelClass = function() {
   if (this.status.idle)
@@ -29,16 +46,23 @@ Template.matches.helpers({
     //return Meteor.users.find({'status.online': true, _id: {$ne: Meteor.userId()}})
   }
 });
+    
+    $(document).ready(function(){
+    $(".card-panel").hide(0).delay(500).fadeIn(3000)
+    });
+
 
 Template.matches.events({
 
   'click .user':function(){
+   
     Session.set('currentId',this._id);
     //Session.set('isChatting',1);
     var res=ChatRooms.findOne({chatIds:{$all:[this._id,Meteor.userId()]}});
     if(res){
     //already room exists
       Session.set("roomid",res._id);
+       
     }
     else{
     //no room exists
@@ -46,4 +70,7 @@ Template.matches.events({
       Session.set('roomid',newRoom);
     }
   }
+
+
+    
 });
