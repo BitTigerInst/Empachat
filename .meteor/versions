@@ -16,6 +16,7 @@ caching-html-compiler@1.0.2
 callback-hook@1.0.4
 check@1.1.0
 coffeescript@1.0.11
+dandv:caret-position@2.1.1
 ddp@1.2.2
 ddp-client@1.2.1
 ddp-common@1.2.2
@@ -56,6 +57,7 @@ meteor@1.1.10
 meteor-base@1.0.1
 minifiers@1.1.7
 minimongo@1.0.10
+mizzao:autocomplete@0.5.1
 mizzao:timesync@0.3.4
 mizzao:user-status@0.6.6
 mobile-experience@1.0.1

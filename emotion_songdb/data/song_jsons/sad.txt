@@ -1,0 +1,20 @@
+{"artist":"Interest Relief","title":"The Vine"}
+{"artist":"Mikky Ekko","title":"Sad Eyes"}
+{"artist":"Ashley Lennon Thomas","title":"Funeral Flowers"}
+{"artist":"Fabrizio Paterlini","title":"Profondo Blu"}
+{"artist":"Armchair Cynics","title":"Ablaze"}
+{"artist":"Heinali","title":"Little by Little"}
+{"artist":"Armchair Cynics","title":"Ablaze"}
+{"artist":"The Rest","title":"Over The Hill"}
+{"artist":"Blue Sky Black Death","title":"Shoot You Dead"}
+{"artist":"Evan Brightly","title":"Madison"}
+{"artist":"Sunday Radio","title":"Blacking Out the Friction"}
+{"artist":"Sunday Radio","title":"Blacking Out the Friction"}
+{"artist":"Blue Sky Black Death","title":"Once Away"}
+{"artist":"St. Lola In The Fields","title":"Hold Me"}
+{"artist":"Page CXVI","title":"Joy"}
+{"artist":"St. Lola In The Fields","title":"Hold Me"}
+{"artist":"Yael Meyer","title":"When The Road Ends Acoustic"}
+{"artist":"Trout and Parrot","title":"Sail Through Blue"}
+{"artist":"Interest Relief","title":"The Vine"}
+{"artist":"Allison Geddie","title":"Walking Slow"}

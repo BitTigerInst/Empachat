@@ -1,0 +1,20 @@
+{"artist":"Pepi Ginsberg (Feat. The Sp...","title":"Oh, La"}
+{"artist":"The Online Romance","title":"ladybug, dont smile"}
+{"artist":"mojave","title":"Crows Funeral"}
+{"artist":"Hey Willpower","title":"Hundredaire"}
+{"artist":"Marina V","title":"Run"}
+{"artist":"The Rescues","title":"Follow Me Back Into The Sun"}
+{"artist":"Marina V","title":"Run"}
+{"artist":"International Velvet","title":"Sitargazer"}
+{"artist":"Officer Kicks","title":"Dog Day Rush"}
+{"artist":"Yael Meyer","title":"When The Road Ends"}
+{"artist":"The Mommyheads","title":"Help Me"}
+{"artist":"Don't Tell Sophie","title":"Vonnegut"}
+{"artist":"EnV","title":"Anonymous"}
+{"artist":"Lissie","title":"In Sleep"}
+{"artist":"Officer Kicks","title":"Dog Day Rush"}
+{"artist":"EnV","title":"Anonymous"}
+{"artist":"Spring Cities","title":"Deer"}
+{"artist":"EnV","title":"Anonymous"}
+{"artist":"Joe Purdy","title":"San Jose"}
+{"artist":"Lelia Broussard","title":"Armor On My Heart"}

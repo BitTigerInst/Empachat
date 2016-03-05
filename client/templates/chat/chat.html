@@ -1,8 +1,24 @@
 <template name='chat'>
+<div id='chatbox' style="display:none">
+    <div style="height:20px">
+        
+    </div>
 
-    {{> loginButtons}}
-    <div>
-            <button class = "btn btn-success back-previous">Cancel</button>
+
+    <div class="" style="background-color:;height:530px">
+        <div class="row" style="margin:0 0 0 0;">
+            <div class="col s12 m6 l7">
+                <div class="card" style="padding:0 0 0 0; width:95%">
+                    {{> musicplayer}}
+                </div>
+                <div id="chatbox">
+                    <div  id="scroll" >
+                        <div style="margin:20px 20px 20px 20px;">
+                            {{> messages}}
+                            <!-- {{test_template}} -->
+                            <br>
+                        </div>
+                    </div>
                     <div class="" style="width:95%">
                         <div style="margin:20px 20px 20px 20px;">
                             {{> chatwindow}}
@@ -27,22 +43,17 @@
 
         </div>
     </div>
-   
+    {{> cancel}}
+</div>
 
 </template>
+
 
 <template name="messages">
 
     {{#each msgs}}
     <!--{{createdAt}}-->
-    <p id="chat-content"><span class="name">{{name}}</span> <span class="text">{{text}}</span></p>
-    {{/each}}
-</template>
 
-<template name="notifications">
-    <ul class="notifications">
-       {{#each notifications}}
-           {{> notification}}
-       {{/each}}
-    </ul>
+    <div class="{{name}}"><span class="name">{{name}}:</span> <span class="text">{{text}}</span></div><br>
+    {{/each}}
 </template>
