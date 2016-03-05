@@ -32,16 +32,17 @@ function goBack() {
 
 
 function hidden() {
-    //window.document.getElementById("emotionform").setAttribute("hidden");
+    window.document.getElementById("home").setAttribute("hidden");
 
-    window.document.getElementById("home").style.display = 'none';
+    //window.document.getElementById("home").style.display = 'none';
     window.document.getElementById("chatbox").style.display = 'initial';
 }
 
 
 function unhidden() {
-    //window.document.getElementById("emotionform").removeAttribute("hidden");
-    window.document.getElementById("home").style.display = 'initial';
+    window.document.getElementById("home").removeAttribute("hidden");
+    //window.document.getElementById("home").style.display = 'initial';
+    
     window.document.getElementById("chatbox").style.display = 'none';
 }
 
