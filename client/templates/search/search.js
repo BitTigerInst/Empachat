@@ -32,7 +32,7 @@ function goBack() {
 
 
 function hidden() {
-    window.document.getElementById("home").setAttribute("hidden");
+    window.document.getElementById("home").setAttribute("class","hidden");
 
     //window.document.getElementById("home").style.display = 'none';
     window.document.getElementById("chatbox").style.display = 'initial';
@@ -40,7 +40,7 @@ function hidden() {
 
 
 function unhidden() {
-    window.document.getElementById("home").removeAttribute("hidden");
+    window.document.getElementById("home").removeAttribute("class","hidden");
     //window.document.getElementById("home").style.display = 'initial';
     
     window.document.getElementById("chatbox").style.display = 'none';
@@ -79,9 +79,10 @@ Meteor.methods({
 	{
 		
 		if (!Words.findOne({"word": word}))
-		{
-			window.alert("Cannot find " + word + "!!!");
+		{ 
             unhidden();
+			window.alert("Cannot find " + word + "!!!");
+            
 			 return;
 		}
 		var requests = Requests.find().fetch();
