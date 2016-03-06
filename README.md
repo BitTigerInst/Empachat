@@ -8,9 +8,9 @@ Empachat provides empathetic chat. Empachat connects together two users who have
 
 #### Owner
 @team: HomoSapiens
-  * Team Leader/Full Stack: [Mark](https://github.com/mAsCuLiNe)
-  * Frontend: [Jensen](https://github.com/yyssjj33)
-  * Backend: [Kevin](https://github.com/kaiqianz), [Jay](https://github.com/YingjieHe)
+  * Team Leader/Full Stack: [Mark Chen](https://github.com/mAsCuLiNe)
+  * Frontend: [Jensen Yang](https://github.com/yyssjj33)
+  * Backend: [Kevin Zhang](https://github.com/kaiqianz), [Jay He](https://github.com/YingjieHe)
   * Data Service: [Chengguang (Mike) Yang](https://github.com/mikeyangh)
 
 #### Schedule
