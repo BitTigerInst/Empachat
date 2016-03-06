@@ -1,7 +1,10 @@
 Empachat
 -----
 
-Trello: [https://trello.com/b/PaDEEjXb/schedule](https://trello.com/b/PaDEEjXb/schedule)
+
+#### Description
+
+Empachat provides empathetic chat. Empachat connects together two users who have similar feelings, and it provides them with the same hearing experience of the similar feelings.
 
 #### Owner
 @team: HomoSapiens
@@ -9,11 +12,6 @@ Trello: [https://trello.com/b/PaDEEjXb/schedule](https://trello.com/b/PaDEEjXb/s
   * Frontend: [Jensen](https://github.com/yyssjj33)
   * Backend: [Kevin](https://github.com/kaiqianz), [Jay](https://github.com/YingjieHe)
   * Data Service: [Chengguang (Mike) Yang](https://github.com/mikeyangh)
-
-
-#### Description
-
-Empachat provides empathetic chat. Empachat connects together two users who have similar feelings, and it provides them with the same hearing experience of the similar feelings.
 
 #### Schedule
 
@@ -113,3 +111,4 @@ Empachat provides empathetic chat. Empachat connects together two users who have
 * [Material Design](https://www.google.com/design/spec/material-design/introduction.html)
 * [MeteorJs Best Practices](http://guide.meteor.com)
 
+Trello: [https://trello.com/b/PaDEEjXb/schedule](https://trello.com/b/PaDEEjXb/schedule)
