@@ -206,3 +206,15 @@ Meteor.methods({
     }
 
 });
+
+UserStatus.events.on("connectionLogout", function(fields){
+   //console.log(fields);
+   console.log("logging out!!!");
+   user_id = fields.userId;
+   user_name = Meteor.users.find({'_id': user_id}).fetch()[0].username;
+   console.log(user_name);
+   Meteor.call("logoutClean", user_name);
+   //goBack();
+}); 
+
+
