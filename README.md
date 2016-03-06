@@ -3,6 +3,14 @@ Empachat
 
 Trello: [https://trello.com/b/PaDEEjXb/schedule](https://trello.com/b/PaDEEjXb/schedule)
 
+#### Owner
+@team: HomoSapiens
+  * Team Leader: [Mark](https://github.com/mAsCuLiNe)
+  * Frontend: [Jensen](https://github.com/yyssjj33)
+  * Backend: [Kevin](https://github.com/kaiqianz), [Jay](https://github.com/YingjieHe)
+  * Data Service: [Chengguang (Mike) Yang](https://github.com/mikeyangh)
+
+
 #### Description
 
 Empachat provides empathetic chat. Empachat connects together two users who have similar feelings, and it provides them with the same hearing experience of the similar feelings.
@@ -53,7 +61,7 @@ Empachat provides empathetic chat. Empachat connects together two users who have
     * Data service
       * Construct emotion-song mapping
       * Adapt cloud database to backend
-  * **[2016/03/06 - ]** Stage 5
+  * **[2016/03/06 - ]** Further Improvements
     * Frontend
       * Rewrite with AngularJS
       * Learn frontend testing and test
@@ -104,8 +112,4 @@ Empachat provides empathetic chat. Empachat connects together two users who have
 #### Development Guidelines
 * [Material Design](https://www.google.com/design/spec/material-design/introduction.html)
 * [MeteorJs Best Practices](http://guide.meteor.com)
-
-#### Owner
-
-@team: HomoSapiens
 
