@@ -17,6 +17,3 @@ Router.map(function () {
     layoutTemplate: 'application-layout',
   });
 });
-
-
-
