@@ -7,19 +7,68 @@ Trello: [https://trello.com/b/PaDEEjXb/schedule](https://trello.com/b/PaDEEjXb/s
 
 Empachat provides empathetic chat. Empachat connects together two users who have similar feelings, and it provides them with the same hearing experience of the similar feelings.
 
-#### Plan
+#### Schedule
 
   * **[2016/02/04 - 2016/02/07]** Proposal Writting, System Design, Resource Discovery, Prototyping
-  * **[2016/02/07 - 2016/02/14]** Implement Core Functions
-    * Frontend Group
-      * Learn Frontend Tools
+  * **[2016/02/07 - 2016/02/14]** Stage 1
+    * Frontend
+      * Learn Material Design
       * Basic Frontend Implementation
-    * Backend Group
-      * Learn Backend Tools
-    * Data Service Group
-      * Discuss implementation
-  * **[2016/02/15 - 2016/02/21]** Further improvement
-  * **[2016/02/21 - 2016/02/29]** User Manual Writing and Video Presentation Making
+    * Backend
+      * Learn MeteorJS and MongoDB
+    * Data Service
+      * Crawl thesaurus.com
+      * Build synonym graph
+  * **[2016/02/15 - 2016/02/21]** Stage 2
+    * Frontend
+      * Select and apply material design color palette
+      * Implement index page (without functionality)
+      * Screen size adaptation
+    * Backend
+      * Login/signup
+      * User online status detection
+    * Data service
+      * Database of Between-emotion shortest distance
+  * **[2016/02/22 - 2016/02/27]** Stage 3
+    * Frontend
+      * Convert Empachat to a single page app
+      * Emotion search auto completion
+      * Furnish the styling/Refine material design principles
+    * Backend
+      * Improve file structure for best practice
+      * Chat module
+      * Notification module
+      * Emotion request module
+      * Matched user detection module
+    * Data service
+      * Collect songs tagged with emotions
+  * **[2016/02/28 - 2016/03/04]** Midterms week/Mark has interviews
+  * **[2016/03/05]** Stage 4
+    * Frontend
+      * Further styling
+    * Backend
+      * Improve notification module
+      * Testing and deployment
+      * Music playing according to emotion
+    * Data service
+      * Construct emotion-song mapping
+      * Adapt cloud database to backend
+  * **[2016/03/06 - ]** Stage 5
+    * Frontend
+      * Rewrite with AngularJS
+      * Learn frontend testing and test
+      * Documentation
+      * Improve screen size adaptation
+      * Probably we will make a data visualization module which visualizes the song-emotion mapping. 
+    * Backend
+      * Learn backend testing and test
+      * Documentation
+      * Adapt cloud database to frontend
+      * Learn Meteor best practice and optimize the code
+    * Data service
+      * Improve emotion-song mapping algorithm
+    * Other
+      * Video demo
 
 #### Resource
 
@@ -36,10 +85,8 @@ Empachat provides empathetic chat. Empachat connects together two users who have
     * [MongoDB](https://www.coursera.org/learn/web-application-development)
     * [Soundcloud API](https://developers.soundcloud.com/docs/api/guide)
   * Data Service
-    * [Hadoop API](http://wiki.apache.org/hadoop/)
-    * [Sentiment Analysis Quora](https://www.quora.com/Is-there-a-downloadable-database-of-positive-and-negative-words)
-    * [Million Song Dataset](http://labrosa.ee.columbia.edu/millionsong/)
     * [Thesaurus.com](http://www.thesaurus.com)
+    * [Thesixtyone.com](http://www.thesixtyone.com)
 
 #### Language & Framework
  * Languages
