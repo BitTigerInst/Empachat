@@ -11,7 +11,7 @@ Empachat provides empathetic chat. Empachat connects together two users who have
   * Team Leader/Full Stack: [Mark Chen](https://github.com/mAsCuLiNe)
   * Frontend: [Jensen Yang](https://github.com/yyssjj33)
   * Backend: [Kevin Zhang](https://github.com/kaiqianz), [Jay He](https://github.com/YingjieHe)
-  * Data Service: [Chengguang (Mike) Yang](https://github.com/mikeyangh)
+  * Data Service: [Mark Chen](https://github.com/mAsCuLiNe), [Chengguang (Mike) Yang](https://github.com/mikeyangh)
 
 #### Schedule
 
