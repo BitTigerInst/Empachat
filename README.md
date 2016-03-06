@@ -5,7 +5,7 @@ Trello: [https://trello.com/b/PaDEEjXb/schedule](https://trello.com/b/PaDEEjXb/s
 
 #### Owner
 @team: HomoSapiens
-  * Team Leader: [Mark](https://github.com/mAsCuLiNe)
+  * Team Leader/Full Stack: [Mark](https://github.com/mAsCuLiNe)
   * Frontend: [Jensen](https://github.com/yyssjj33)
   * Backend: [Kevin](https://github.com/kaiqianz), [Jay](https://github.com/YingjieHe)
   * Data Service: [Chengguang (Mike) Yang](https://github.com/mikeyangh)
