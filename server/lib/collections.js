@@ -23,11 +23,11 @@ Meteor.publish("words", function() {
 
 Meteor.publish("candidates", function(){
     return Candidates.find();
-})
+});
 
 Meteor.publish("songs", function(){
     return Songs.find();
-})
+});
 
 /*
 function jumpto(anchor){
@@ -101,7 +101,8 @@ Meteor.startup(function(){
             }
         }
 
-        var songs = JSON.parse(Assets.getText('emotion_song_artist_list.json')); 
+        //var songs = JSON.parse(Assets.getText('emotion_song_artist_list.json')); 
+        var songs = JSON.parse(Assets.getText('emotion_song_artist_songlink_list.json')); 
         console.log(songs.length);
         if (Songs.find().count() != songs.length)
         {
@@ -111,7 +112,9 @@ Meteor.startup(function(){
                 Songs.insert({
                     emotion: songs[i]['emotion'],
                     title: songs[i]['title'],
-                    artist: songs[i]['artist']
+                    artist: songs[i]['artist'],
+                    src: songs[i]['song_link']
+
                 });
             }
         }

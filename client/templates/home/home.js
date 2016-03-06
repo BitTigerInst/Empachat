@@ -7,6 +7,7 @@ Pairs = new Mongo.Collection("pairs");
 Words = new Mongo.Collection("words");
 Requests = new Mongo.Collection("requests");
 Candidates = new Mongo.Collection("candidates");
+Songs = new Mongo.Collection("songs");
 
 Accounts.ui.config({
   passwordSignupFields: "USERNAME_ONLY"

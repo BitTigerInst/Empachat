@@ -19,7 +19,9 @@ Template.search.helpers({
 		}
 	});
 
+
 Meteor.subscribe("words");
+Meteor.subscribe("songs");
 
 
 function jumpto(anchor){
@@ -49,9 +51,19 @@ function unhidden() {
 Template.search.events({
 		"submit .request": function (event) {
 			//console.log("submit call");
+
 			event.preventDefault();
 			var word = event.target.emotion.value;
+
+			var target_emotion = Words.find({"word": word}).fetch()[0].target;
+			console.log(target_emotion);
+			var song_num = Songs.find({"emotion": target_emotion}).count();
+			var index = Math.floor((Math.random() * song_num) + 1) - 1;
+			var song_url = Songs.find({"emotion": target_emotion}).fetch()[index].src[0];
+			console.log(index);
+			console.log(song_url);
 			//event.target.emotion.value = "";	
+			Session.set('current_song_url', song_url);
             
 			//jumpto("#chatbox");
             hidden();
