@@ -48,7 +48,7 @@ Template.matches.helpers({
 });
     
     $(document).ready(function(){
-    $(".card-panel").hide(0).delay(500).fadeIn(3000)
+    $(".card-panel").hide(0).delay(500).fadeIn(3000)    
     });
 
 
