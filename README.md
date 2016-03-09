@@ -1,6 +1,7 @@
 Empachat
 -----
 
+Latest stable website deployed: [empachat.meteor.com](empachat.meteor.com)
 
 #### Description
 
