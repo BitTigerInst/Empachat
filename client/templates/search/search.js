@@ -49,16 +49,28 @@ Template.search.events({
 
 			event.preventDefault();
 			var word = event.target.emotion.value;
+            word = word.trim();
+            if (word == "")
+            {
+                window.alert("Please enter your emotion!!!");
+                return;
+            }
 
-			var target_emotion = Words.find({"word": word}).fetch()[0].target;
-			console.log(target_emotion);
-			var song_num = Songs.find({"emotion": target_emotion}).count();
-			var index = Math.floor((Math.random() * song_num) + 1) - 1;
-			var song_url = Songs.find({"emotion": target_emotion}).fetch()[index].src[0];	
-			Session.set('current_song_url', song_url);
-            
+            if (!Words.findOne({"word": word}))
+            {
+                window.alert("Unfound emotion " + word + "!!!");
+                return;
+            }
+			          
             hidden();
 			Meteor.call("addRequest", word);
+
+            var target_emotion = Words.find({"word": word}).fetch()[0].target;
+            console.log(target_emotion);
+            var song_num = Songs.find({"emotion": target_emotion}).count();
+            var index = Math.floor((Math.random() * song_num) + 1) - 1;
+            var song_url = Songs.find({"emotion": target_emotion}).fetch()[index].src[0];   
+            Session.set('current_song_url', song_url);
             
 			event.target.emotion.value = "";	
 		},
@@ -79,12 +91,6 @@ Template.cancel.events({
 Meteor.methods({    
     addRequest: function (word)
     {
-        
-        if (!Words.findOne({"word": word}))
-        {
-            window.alert("Cannot find " + word + "!!!");
-            return;
-        }
         var requests = Requests.find().fetch();
         
         var myGuests = [];

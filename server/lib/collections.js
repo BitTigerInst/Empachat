@@ -100,11 +100,6 @@ Meteor.methods({
     addRequest: function (word)
     {
         
-        if (!Words.findOne({"word": word}))
-        {
-            window.alert("Cannot find " + word + "!!!");
-            return;
-        }
         var requests = Requests.find().fetch();
         
         var myGuests = [];
