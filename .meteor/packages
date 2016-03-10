@@ -24,6 +24,7 @@ accounts-password
 mizzao:user-status
 accounts-base
 ian:bootstrap-3
+mizzao:autocomplete
 accounts-ui-unstyled
 accounts-ui
 mizzao:autocomplete
