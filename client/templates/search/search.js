@@ -35,22 +35,17 @@ function goBack() {
 
 function hidden() {
     window.document.getElementById("home").setAttribute("class","hidden");
-
-    //window.document.getElementById("home").style.display = 'none';
     window.document.getElementById("chatbox").style.display = 'initial';
 }
 
 
 function unhidden() {
     window.document.getElementById("home").removeAttribute("class","hidden");
-    //window.document.getElementById("home").style.display = 'initial';
-    
     window.document.getElementById("chatbox").style.display = 'none';
 }
 
 Template.search.events({
 		"submit .request": function (event) {
-			//console.log("submit call");
 
 			event.preventDefault();
 			var word = event.target.emotion.value;
@@ -59,13 +54,9 @@ Template.search.events({
 			console.log(target_emotion);
 			var song_num = Songs.find({"emotion": target_emotion}).count();
 			var index = Math.floor((Math.random() * song_num) + 1) - 1;
-			var song_url = Songs.find({"emotion": target_emotion}).fetch()[index].src[0];
-			console.log(index);
-			console.log(song_url);
-			//event.target.emotion.value = "";	
+			var song_url = Songs.find({"emotion": target_emotion}).fetch()[index].src[0];	
 			Session.set('current_song_url', song_url);
             
-			//jumpto("#chatbox");
             hidden();
 			Meteor.call("addRequest", word);
             
@@ -80,81 +71,68 @@ Template.cancel.events({
 	{	
 		event.preventDefault();
 		Meteor.call("deleteRequest");
-		//goBack();
-		//jumpto("#home");
         unhidden();
+        Session.set('current_song_url', '');
 	}
 });
 
-Meteor.methods({	
-	addRequest: function (word)
-	{
-		
-		if (!Words.findOne({"word": word}))
-		{ 
-            unhidden();
-			window.alert("Cannot find " + word + "!!!");
-            
-			 return;
-		}
-		var requests = Requests.find().fetch();
-		
-		var myGuests = [];
-		//console.log("length = " + requests.length);
-		for (i = 0; i < requests.length; i++)
-		{
-			var pair1 = Pairs.find({"source": word, "target": requests[i]["emotion"]}).fetch()[0];
-			var pair2 = Pairs.find({"source": requests[i]["emotion"], "target": word}).fetch()[0];
-			if (pair1)
-				console.log(pair1.distance);
-			if (pair2)
-				console.log(pair2.distance);
-			if ((pair1 && pair1.distance <= 3) || (pair2 && pair2.distance <= 3))
-			{
-				//console.log("i'm here");
-				var updateGuests = Candidates.find({"host": requests[i]["username"]}).fetch()[0].guests;
-				updateGuests.push(Meteor.user().username);
-				//console.log(updateGuests);
-				//Candidates.update({username: requests[i].username}, {$set: {guests: updateGuests}});
-				Candidates.update({host: requests[i].username}, {host: requests[i].username, guests: updateGuests});
+Meteor.methods({    
+    addRequest: function (word)
+    {
+        
+        if (!Words.findOne({"word": word}))
+        {
+            window.alert("Cannot find " + word + "!!!");
+            return;
+        }
+        var requests = Requests.find().fetch();
+        
+        var myGuests = [];
+        console.log("length = " + requests.length);
+        for (i = 0; i < requests.length; i++)
+        {
+            var pair1 = Pairs.find({"source": word, "target": requests[i]["emotion"]}).fetch()[0];
+            var pair2 = Pairs.find({"source": requests[i]["emotion"], "target": word}).fetch()[0];
 
-				myGuests.push(requests[i].username);
-			}
-		}
-		
-		Requests.insert({
-			username: Meteor.user().username,
-			emotion: word
-		});
-		
-		Candidates.insert({
-			host: Meteor.user().username,
-			guests: myGuests
-		});
+            if (pair1 || pair2)
+            {
+                console.log("i'm here");
+                var updateGuests = Candidates.find({"host": requests[i]["username"]}).fetch()[0].guests;
+                updateGuests.push(Meteor.user().username);
+                Candidates.update({host: requests[i].username}, {host: requests[i].username, guests: updateGuests});
 
-		hidden();
-	},
-	
-	deleteRequest: function ()
-	{
-		Requests.remove({
-			username: Meteor.user().username,
-		});
-		var myGuests = Candidates.find({"host": Meteor.user().username}).fetch()[0].guests;
-		Candidates.remove({host: Meteor.user().username});
-		for (i = 0; i < myGuests.length; i++)
-		{
-			var updateguests = Candidates.find({"host": myGuests[i]}).fetch()[0].guests;
-			index = updateguests.indexOf(Meteor.user().username);
-			updateguests.splice(index, 1);
-			Candidates.update({host: myGuests[i]}, {host: myGuests[i], guests: updateguests})
-		}
-		//alert("You have canceled the request!");
-		unhidden();
-	},
+                myGuests.push(requests[i].username);
+            }
+        }
+        
+        Requests.insert({
+            username: Meteor.user().username,
+            emotion: word
+        });
+        
+        Candidates.insert({
+            host: Meteor.user().username,
+            guests: myGuests
+        });
+    },
+    
+    deleteRequest: function ()
+    {
+        Requests.remove({
+            username: Meteor.user().username,
+        });
+        var myGuests = Candidates.find({"host": Meteor.user().username}).fetch()[0].guests;
+        Candidates.remove({host: Meteor.user().username});
+        for (i = 0; i < myGuests.length; i++)
+        {
+            var updateguests = Candidates.find({"host": myGuests[i]}).fetch()[0].guests;
+            index = updateguests.indexOf(Meteor.user().username);
+            updateguests.splice(index, 1);
+            Candidates.update({host: myGuests[i]}, {host: myGuests[i], guests: updateguests});
+        }
+    },
 
-	
-	logoutClean: function (user_name)
+    logoutClean: function (user_name)
     {
         Requests.remove({
             username: user_name,
@@ -168,9 +146,8 @@ Meteor.methods({
             updateguests.splice(index, 1);
             Candidates.update({host: myGuests[i]}, {host: myGuests[i], guests: updateguests});
         }
-        //alert("You have canceled the request!");
-        unhidden();
     }
+
 });
 
 

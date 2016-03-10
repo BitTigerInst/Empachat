@@ -11,17 +11,27 @@ nodes = G.nodes()
 #with open('nodes.json', 'w') as f:
 #	json.dump([{'word': node} for node in nodes], f, indent=4)
 
-
-#client = MongoClient("127.0.0.1:3001")
-#db = client.meteor
-#collection = db.graphs
-#for doc in collection.find():
-#	print doc
-#collection.insert_one({"source": "S", "target": "T", "distance": 1000})
-
-def getScore(d1, d2):
-	return (d1+d2)/2.0/(d1*d2);
-
+# generate words.json
+targetEmotions = ["chill", "crazy", "happy", "love", "lovely", "mellow", "nice", "party", "relax", "rocky", "sad", "slow", "smooth", "soft", "trippy", "upbeat"]
+words = {}
+with open('words.json', 'w') as f:
+	for node in nodes:
+		optimalTarget = ""
+		distance = 10000
+		for targetEmotion in targetEmotions:
+			if targetEmotion not in nodes:
+				continue
+			if nx.has_path(G, node, targetEmotion):
+				curDistance = len(nx.shortest_path(G, source=node, target=targetEmotion))
+			if nx.has_path(G, targetEmotion, node):
+				curDistance = len(nx.shortest_path(G, source=targetEmotion, target=node))
+			if curDistance < distance:
+				optimalTarget = targetEmotion
+				distance = curDistance
+		words[node] = (optimalTarget, distance)
+	json.dump([{'word': k, 'target': v[0], 'distance': v[1]} for k, v in words.items()], f, indent=4)
+	
+# generate pair.json
 data = {}
 i = 0
 for v in nodes:
@@ -39,6 +49,7 @@ for v in nodes:
 with open('pair.json', 'w') as f:
 	json.dump([{'source': k[0], 'target': k[1]} for k, v in data.items()], f)
 
+# old version of data, too large
 """
 data = {}
 for v in nodes:

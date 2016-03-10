@@ -29,24 +29,6 @@ Meteor.publish("songs", function(){
     return Songs.find();
 });
 
-/*
-function jumpto(anchor){
-    window.location.href = anchor;
-}
-
-function goBack() {
-    window.history.back();
-}
-
-function hidden() {
-    document.getElementById("emotionform").setAttribute("hidden");
-}
-
-function unhidden() {
-    document.getElementById("emotionform").removeAttribute("hidden");
-}*/
-
-
 Meteor.publish('notifications', function() {
   return Notifications.find();
 });
@@ -65,27 +47,20 @@ Meteor.startup(function(){
     });
 
     Meteor.startup(function(){
-        //var data = JSON.parse(Assets.getText('match.json'));
         var data = JSON.parse(Assets.getText('pair.json'));
-        //Assets.getText('test.json');
-        //console.log(data.length);
         if (Pairs.find().count() != data.length)
         {
             Pairs.remove({});
             for (i = 0; i < data.length; i++)
             {   
                     Pairs.insert({
-                        //_id: data[i]['source'] + "-" + data[i]['target'],
                         source: data[i]['source'],
-                        target: data[i]['target'],
-                        //distance: data[i]['distance']
+                        target: data[i]['target']
                     });
             }
         }
         
-        //var words = JSON.parse(Assets.getText('nodes.json'));
         var words = JSON.parse(Assets.getText('words.json'));
-        console.log(words.length);
         if (Words.find().count() != words.length)
         {
             Words.remove({});
@@ -93,7 +68,6 @@ Meteor.startup(function(){
             {   
                 
                     Words.insert({
-                        //_id: words[i],
                         word: words[i]['word'],
                         target: words[i]['target'],
                         distance: words[i]['distance']
@@ -101,9 +75,7 @@ Meteor.startup(function(){
             }
         }
 
-        //var songs = JSON.parse(Assets.getText('emotion_song_artist_list.json')); 
         var songs = JSON.parse(Assets.getText('emotion_song_artist_songlink_list.json')); 
-        console.log(songs.length);
         if (Songs.find().count() != songs.length)
         {
             Songs.remove({});
@@ -141,18 +113,12 @@ Meteor.methods({
         {
             var pair1 = Pairs.find({"source": word, "target": requests[i]["emotion"]}).fetch()[0];
             var pair2 = Pairs.find({"source": requests[i]["emotion"], "target": word}).fetch()[0];
-            //if (pair1)
-            //    console.log(pair1.distance);
-            //if (pair2)
-            //    console.log(pair2.distance);
-            //if ((pair1 && pair1.distance <= 3) || (pair2 && pair2.distance <= 3))
+
             if (pair1 || pair2)
             {
                 console.log("i'm here");
                 var updateGuests = Candidates.find({"host": requests[i]["username"]}).fetch()[0].guests;
                 updateGuests.push(Meteor.user().username);
-                console.log(updateGuests);
-                //Candidates.update({username: requests[i].username}, {$set: {guests: updateGuests}});
                 Candidates.update({host: requests[i].username}, {host: requests[i].username, guests: updateGuests});
 
                 myGuests.push(requests[i].username);
@@ -168,8 +134,6 @@ Meteor.methods({
             host: Meteor.user().username,
             guests: myGuests
         });
-
-        //hidden();
     },
     
     deleteRequest: function ()
@@ -186,8 +150,6 @@ Meteor.methods({
             updateguests.splice(index, 1);
             Candidates.update({host: myGuests[i]}, {host: myGuests[i], guests: updateguests});
         }
-        //alert("You have canceled the request!");
-        //unhidden();
     },
 
     logoutClean: function (user_name)
@@ -204,20 +166,14 @@ Meteor.methods({
             updateguests.splice(index, 1);
             Candidates.update({host: myGuests[i]}, {host: myGuests[i], guests: updateguests});
         }
-        //alert("You have canceled the request!");
-        //unhidden();
     }
 
 });
 
 UserStatus.events.on("connectionLogout", function(fields){
-   //console.log(fields);
-   console.log("logging out!!!");
    user_id = fields.userId;
    user_name = Meteor.users.find({'_id': user_id}).fetch()[0].username;
-   console.log(user_name);
    Meteor.call("logoutClean", user_name);
-   //goBack();
 }); 
 
 
