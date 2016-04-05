@@ -1,7 +1,7 @@
 Empachat
 -----
 
-Latest stable website deployed: [empachat.meteor.com](http://54.175.4.6:3000)
+Latest stable website deployed: [empachat.meteor.com](http://54.175.72.40:3030)
 
 #### Description
 
